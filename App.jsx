@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+
+import { useEffect, useState } from 'react';
 
 export default function App() {
   const defaultState = {
@@ -41,15 +42,17 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: 20, maxWidth: 400, margin: "0 auto" }}>
+    <div style={{ padding: "2rem", maxWidth: "400px", margin: "auto", textAlign: "center" }}>
       <h1>🌾 Tycoon Granjero</h1>
       <p>💰 Dinero: ${game.money}</p>
       <p>🌱 Semillas: {game.seeds}</p>
       <p>🥕 Cultivos: {game.crops}</p>
-      <button onClick={buySeeds}>Comprar Semilla ($10)</button>
-      <button onClick={plantSeeds}>Plantar Semilla</button>
-      <button onClick={sellCrops}>Vender Cultivos ($20 c/u)</button>
-      <button onClick={resetGame}>Reiniciar Juego</button>
+      <div style={{ marginTop: "1rem" }}>
+        <button onClick={buySeeds}>Comprar Semilla ($10)</button><br /><br />
+        <button onClick={plantSeeds}>Plantar Semilla</button><br /><br />
+        <button onClick={sellCrops}>Vender Cultivos ($20 c/u)</button><br /><br />
+        <button onClick={resetGame}>Reiniciar Juego</button>
+      </div>
     </div>
   );
 }
